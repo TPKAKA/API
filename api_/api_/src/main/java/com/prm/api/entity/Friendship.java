@@ -2,21 +2,20 @@ package com.prm.api.entity;
 
 import lombok.*;
 import javax.persistence.*;
- // Use jakarta.persistence instead of javax.persistence
 
-@Entity // Add @Entity annotation
+@Entity
 @Table(name = "Friendships")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 @IdClass(FriendshipId.class)
-public class Friendship { // Renamed from FriendShip to Friendship
+public class Friendship {
     @Id
-    @Column(name = "User")
+    @Column(name = "User") // Khớp với bảng SQLite
     private Integer userId;
 
     @Id
-    @Column(name = "Friend")
+    @Column(name = "Friend") // Khớp với bảng SQLite
     private Integer friendId;
 }

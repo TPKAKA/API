@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "Id")
+    @Column(name = "ID") // Khớp với bảng SQLite
     private Integer id;
 
     @Column(name = "FirstName")
@@ -27,10 +27,4 @@ public class User {
 
     @Column(name = "Password")
     private String password;
-
-    @Column(name = "Gender")
-    private String gender;
-
-    @Column(name = "Dob")
-    private LocalDateTime dob;
 }

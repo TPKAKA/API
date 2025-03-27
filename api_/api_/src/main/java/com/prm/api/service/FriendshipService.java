@@ -28,6 +28,9 @@ public class FriendshipService {
 
     public List<User> getFriends(Integer userId) {
         List<Friendship> friendships = friendshipRepository.findByUserId(userId);
+        if (friendships == null || friendships.isEmpty()) {
+            return List.of(); // Trả về danh sách rỗng nếu không có bạn bè
+        }
         return friendships.stream()
                 .map(f -> userRepository.findById(f.getFriendId()).orElse(null))
                 .filter(user -> user != null)

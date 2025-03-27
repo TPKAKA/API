@@ -13,13 +13,13 @@ import java.time.LocalDateTime;
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "Id")
+    @Column(name = "ID") // Khớp với bảng SQLite
     private Integer id;
 
     @Column(name = "Content")
     private String content;
 
-    @Column(name = "User")
+    @Column(name = "User") // Khớp với bảng SQLite
     private Integer userId;
 
     @Column(name = "DateTime")

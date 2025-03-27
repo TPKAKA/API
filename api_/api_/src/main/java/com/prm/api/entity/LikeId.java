@@ -9,9 +9,9 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 public class LikeId implements Serializable {
-    @Column(name = "User")
+    @Column(name = "User") // Khớp với bảng SQLite
     private Integer userId;
 
-    @Column(name = "Post")
+    @Column(name = "Post") // Khớp với bảng SQLite
     private Integer postId;
 }
