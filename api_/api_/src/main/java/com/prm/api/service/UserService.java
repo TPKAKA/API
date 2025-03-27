@@ -24,6 +24,10 @@ public class UserService {
         return userRepository.findById(id).orElse(null);
     }
 
+    public List<User> getUsersByName(String name) {
+        return userRepository.findByFirstNameContainingOrLastNameContaining(name, name);
+    }
+
     public User updateUser(Integer id, User user) {
         User existingUser = userRepository.findById(id).orElse(null);
         if (existingUser != null) {
