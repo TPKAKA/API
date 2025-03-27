@@ -9,9 +9,9 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 public class FriendshipId implements Serializable {
-    @Column(name = "User") // Khớp với bảng SQLite
+    @Column(name = "User")
     private Integer userId;
 
-    @Column(name = "Friend") // Khớp với bảng SQLite
+    @Column(name = "Friend")
     private Integer friendId;
 }

@@ -2,7 +2,6 @@ package com.prm.api.entity;
 
 import lombok.*;
 import javax.persistence.*;
-import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "Posts")
@@ -13,15 +12,18 @@ import java.time.LocalDateTime;
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID") // Khớp với bảng SQLite
+    @Column(name = "ID")
     private Integer id;
 
     @Column(name = "Content")
     private String content;
 
-    @Column(name = "User") // Khớp với bảng SQLite
+    @Column(name = "User")
     private Integer userId;
 
     @Column(name = "DateTime")
-    private LocalDateTime dateTime;
+    private String dateTime;
+
+    @Column(name = "image_path")
+    private String imagePath;
 }

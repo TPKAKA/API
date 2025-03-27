@@ -2,7 +2,6 @@ package com.prm.api.entity;
 
 import lombok.*;
 import javax.persistence.*;
-import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "Comments")
@@ -13,7 +12,7 @@ import java.time.LocalDateTime;
 public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "Id")
+    @Column(name = "ID")
     private Integer id;
 
     @Column(name = "Content")
@@ -26,5 +25,5 @@ public class Comment {
     private Integer userId;
 
     @Column(name = "DateTime")
-    private LocalDateTime dateTime;
+    private String dateTime;
 }

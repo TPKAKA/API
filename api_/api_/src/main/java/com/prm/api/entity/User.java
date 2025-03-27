@@ -2,7 +2,6 @@ package com.prm.api.entity;
 
 import lombok.*;
 import javax.persistence.*;
-import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "Users")
@@ -13,7 +12,7 @@ import java.time.LocalDateTime;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID") // Khớp với bảng SQLite
+    @Column(name = "ID")
     private Integer id;
 
     @Column(name = "FirstName")
@@ -27,4 +26,13 @@ public class User {
 
     @Column(name = "Password")
     private String password;
+
+    @Column(name = "Gender")
+    private String gender;
+
+    @Column(name = "Dob")
+    private String dob;
+
+    @Column(name = "avatarPath")
+    private String avatarPath;
 }

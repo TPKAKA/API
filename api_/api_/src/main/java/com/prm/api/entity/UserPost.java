@@ -12,10 +12,10 @@ import javax.persistence.*;
 @IdClass(UserPostId.class)
 public class UserPost {
     @Id
-    @Column(name = "User") // Khớp với bảng SQLite
+    @Column(name = "User")
     private Integer userId;
 
     @Id
-    @Column(name = "Post") // Khớp với bảng SQLite
+    @Column(name = "Post")
     private Integer postId;
 }

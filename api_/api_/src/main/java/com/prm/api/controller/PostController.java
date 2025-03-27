@@ -47,4 +47,20 @@ public class PostController {
         }
         return ResponseEntity.ok(post);
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deletePost(@PathVariable Integer id) {
+        postService.deletePost(id);
+        return ResponseEntity.noContent().build();
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Post> updatePost(@PathVariable Integer id, @RequestBody Post post) {
+        post.setId(id);
+        Post updatedPost = postService.updatePost(post);
+        if (updatedPost == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(updatedPost);
+    }
 }

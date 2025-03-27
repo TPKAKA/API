@@ -10,4 +10,7 @@ public class PostDTO {
     private String dateTime;
     private String firstName;
     private String lastName;
+    private String imagePath;
+    private String avatarPath;
+    private Integer likeCount;
 }
